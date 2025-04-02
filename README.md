@@ -1,4 +1,4 @@
-# Desafío QA Automation - La Nación 
+# Desafío QA Automation - La Nación
 
 Este proyecto automatiza pruebas end-to-end con **Playwright** en el sitio web de La Nación, utilizando el patrón de diseño **Page Object Model (POM)**.
 
@@ -6,47 +6,51 @@ Este proyecto automatiza pruebas end-to-end con **Playwright** en el sitio web d
 
 ```
 📁 pages
-🔼── ui
-│   🔼── home.page.ts          # Página principal de La Nación
-│   🔼── article.page.ts       # Página de un artículo específico
-🔼── services
-    🔼── network.service.ts    # Valida que los requests devuelvan status válidos
+├── ui
+│   ├── home.page.ts           # Página principal de La Nación
+│   └── article.page.ts        # Página de un artículo específico
+└── services
+    └── network.service.ts     # Validación de respuestas HTTP de red
 
 📁 tests
-🔼── home.spec.ts              # Pruebas para la home
-🔼── article.spec.ts           # Pruebas para el artículo
+├── home.spec.ts               # Pruebas para la home
+└── article.spec.ts            # Pruebas para el artículo
 
 📁 data
-🔼── *.json                    # Archivos JSON con contenido estático para validaciones
+└── *.json                     # Archivos JSON con datos estáticos para validaciones
 
+.eslint.config.js              # Configuración de ESLint
+.playwright.config.ts          # Configuración de Playwright
 ```
 
 ## Herramientas y tecnologías
 
 - [Playwright](https://playwright.dev/) con TypeScript
 - Page Object Model (POM)
-- JSON para data-driven testing
+- JSON para pruebas basadas en datos (data-driven testing)
+- ESLint para análisis estático del código
+- GitHub Actions para CI/CD
 
 ## Casos de prueba cubiertos
 
 ### Home
 
-- Validación del header (logo, botones, accesos y cotizaciones).
-- Validación del footer.
-- Validación del artículo principal (imagen y título).
-- Validación de respuestas de red (`status` entre **200 y 399**).
+- Validación del header (logo, botones, accesos y cotizaciones)
+- Validación del footer
+- Validación del artículo principal (imagen y título)
+- Validación de respuestas de red (códigos de estado entre **200 y 399**)
 
 ### Artículo
 
-- Validación del header y footer.
-- Validación del título de la nota.
-- Validación del contenido de los párrafos clave.
-- Validación de respuestas de red (`status` entre **200 y 399**).
+- Validación del header y footer
+- Validación del título de la nota
+- Validación del contenido de párrafos específicos
+- Validación de respuestas de red (códigos de estado entre **200 y 399**)
 
 ## Cómo ejecutar los tests
 
 1. Cloná el repositorio
-2. Instalá dependencias:
+2. Instalá las dependencias:
 
 ```bash
 npm install
@@ -58,38 +62,39 @@ npm install
 npx playwright test
 ```
 
-> Tip: Para abrir el reporte HTML:
->
+4. Para ver el reporte HTML:
+
 ```bash
 npx playwright show-report
 ```
 
-## Notas
+## Validación de código con ESLint
 
-- Antes de cada test se cierran ventanas emergentes (ads y modales).
-- Las URLs están hardcodeadas según el alcance del challenge.
+Para ejecutar el análisis estático de código con ESLint:
 
----
+```bash
+npm run lint
+```
+
+> Se utiliza una configuración moderna (flat config) compatible con TypeScript y las reglas recomendadas por ESLint.
 
 ## CI/CD con GitHub Actions
 
-El proyecto incluye una integración continua con **GitHub Actions**, que:
+Este proyecto incluye una pipeline automatizada que:
 
-1. Ejecuta automáticamente los tests en cada `push` o `pull request` a la rama `main`.
-2. Genera un **reporte HTML** con los resultados de los tests.
-3. Sube el reporte como artefacto para su descarga y visualización.
+- Ejecuta **ESLint** y los **tests de Playwright** ante cada `push` o `pull request` a la rama `main`.
+- Genera un **reporte HTML** con los resultados.
+- Sube el reporte como artefacto para su descarga.
 
 ### Ver el reporte HTML
 
-Después de cada ejecución, podés descargar el reporte desde la pestaña **Actions** del repositorio:
+1. Ingresá a la sección **Actions** del repositorio.
+2. Seleccioná la última ejecución.
+3. En la sección **Artifacts**, descargá `playwright-report` y abrilo localmente.
 
-1. Entrá a la ejecución más reciente en **Actions**.
-2. Buscá al final la sección **Artifacts**.
-3. Hacé clic en `playwright-report` para descargarlo y abrilo localmente con tu navegador.
-
-*El archivo de configuración se encuentra en `.github/workflows/playwright.yml`.*
-
+> La configuración se encuentra en `.github/workflows/playwright.yml`.
 
 ## Autor
 
-- **Taiel Fernandez Jara** – QA Automation Engineer  
+**Taiel Fernandez Jara**  
+QA Automation Engineer
