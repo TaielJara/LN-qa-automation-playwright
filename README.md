@@ -25,9 +25,9 @@ Este proyecto automatiza pruebas end-to-end con **Playwright** en el sitio web d
 
 ## Herramientas y tecnologías
 
-- [Playwright](https://playwright.dev/) con TypeScript
+- Playwright con TypeScript
 - Page Object Model (POM)
-- JSON para pruebas basadas en datos (data-driven testing)
+- JSON para pruebas basadas en datos
 - ESLint para análisis estático del código
 - GitHub Actions para CI/CD
 
