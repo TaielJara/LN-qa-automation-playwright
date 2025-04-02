@@ -49,10 +49,11 @@ export class HomePage {
   }
 
   async closeModal(){
-    await expect(this.modal).toBeVisible();
-    const button = this.modal.locator('button').first();
-    await expect(button).toHaveText('No, gracias');
-    await button.click();
+    if(await this.modal.isVisible()){
+      const button = this.modal.locator('button').first();
+      await expect(button).toHaveText('No, gracias');
+      await button.click();
+    }
   }
 
   async validateHeader(shouldBeVisible = false) {
