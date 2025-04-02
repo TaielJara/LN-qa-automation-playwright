@@ -1,0 +1,24 @@
+{
+    "socialLinks": [
+      {
+        "title": "Seguirnos en Facebook",
+        "href": "https://www.facebook.com/lanacion",
+        "iconId": "facebook"
+      },
+      {
+        "title": "Seguirnos en X",
+        "href": "https://x.com/LANACION/",
+        "iconId": "twitter"
+      },
+      {
+        "title": "Seguirnos en Instagram",
+        "href": "https://www.instagram.com/lanacioncom/",
+        "iconId": "instagram"
+      },
+      {
+        "title": "Ir a RSS",
+        "href": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/?outputType=xml",
+        "iconId": "rss"
+      }
+    ]
+}  

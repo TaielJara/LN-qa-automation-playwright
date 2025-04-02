@@ -1,0 +1,29 @@
+{
+  "copyright": "© Copyright 2025 SA LA NACION | Todos los derechos reservados. Dirección Nacional del Derecho de Autor DNDA - EXPEDIENTE DNDA (renovación) RL-2023-95334553-APN-DNDA#MJ.Queda prohibida la reproducción total o parcial del presente diario.",
+  "recaptcha": {
+    "label": "Protegido por reCAPTCHA:",
+    "links": [
+      {
+        "text": "Condiciones",
+        "href": "https://policies.google.com/terms?hl=es-419",
+        "title": "Ir a Condiciones"
+      },
+      {
+        "text": "Privacidad",
+        "href": "https://policies.google.com/privacy?hl=es-419",
+        "title": "Ir a Privacidad"
+      }
+    ]
+  },
+  "gda": {
+    "text": "Miembro de GDA. Grupo de Diarios América",
+    "href": "https://www.gda.com/",
+    "title": "GDA",
+    "imgSrc": "https://arc-static.glanacion.com/pf/resources/images/gda.webp?d=1794"
+  },
+  "afip": {
+    "href": "http://qr.afip.gob.ar/?qr=HJMakbCpenWNdXYfqXtEDQ,,",
+    "title": "Data fiscal",
+    "imgSrc": "https://arc-static.glanacion.com/pf/resources/images/data-fiscal.webp?d=1794"
+  }
+}

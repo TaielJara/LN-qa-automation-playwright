@@ -1,0 +1,17 @@
+{
+    "stores": [
+      {
+        "title": "Ir a Google Play",
+        "href": "https://play.google.com/store/apps/details?id=app.lanacion.activity&hl=es_419&pli=1",
+        "imgSrc": "https://arc-static.glanacion.com/pf/resources/images/android-store.webp?d=1794",
+        "alt": "App store"
+      },
+      {
+        "title": "Ir a App Store",
+        "href": "https://apps.apple.com/ar/app/la-nacion/id410689702",
+        "imgSrc": "https://arc-static.glanacion.com/pf/resources/images/app-store.webp?d=1794",
+        "alt": "App store"
+      }
+    ]
+  }
+  
