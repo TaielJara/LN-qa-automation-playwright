@@ -97,4 +97,4 @@ Este proyecto incluye una pipeline automatizada que:
 ## Autor
 
 **Taiel Fernandez Jara**  
-QA Automation Engineer
+QA Automation
