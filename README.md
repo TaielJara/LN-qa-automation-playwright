@@ -71,6 +71,25 @@ npx playwright show-report
 
 ---
 
+## CI/CD con GitHub Actions
+
+El proyecto incluye una integración continua con **GitHub Actions**, que:
+
+1. Ejecuta automáticamente los tests en cada `push` o `pull request` a la rama `main`.
+2. Genera un **reporte HTML** con los resultados de los tests.
+3. Sube el reporte como artefacto para su descarga y visualización.
+
+### Ver el reporte HTML
+
+Después de cada ejecución, podés descargar el reporte desde la pestaña **Actions** del repositorio:
+
+1. Entrá a la ejecución más reciente en **Actions**.
+2. Buscá al final la sección **Artifacts**.
+3. Hacé clic en `playwright-report` para descargarlo y abrilo localmente con tu navegador.
+
+*El archivo de configuración se encuentra en `.github/workflows/playwright.yml`.*
+
+
 ## Autor
 
 - **Taiel Fernandez Jara** – QA Automation Engineer  
