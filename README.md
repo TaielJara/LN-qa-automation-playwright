@@ -94,6 +94,22 @@ Este proyecto incluye una pipeline automatizada que:
 
 > La configuración se encuentra en `.github/workflows/playwright.yml`.
 
+### Captura de evidencia en fallos
+
+Playwright está configurado para capturar automáticamente:
+
+1. Screenshots del error.
+2. Videos de la ejecución.
+
+>Estas evidencias se incluyen en el reporte HTML descargable desde GitHub Actions.
+
+La configuración está en playwright.config.ts:
+
+use: {
+  screenshot: 'only-on-failure',
+  video: 'retain-on-failure',
+}
+
 ## Autor
 
 **Taiel Fernandez Jara**  
