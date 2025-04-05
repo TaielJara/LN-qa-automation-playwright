@@ -22,11 +22,9 @@ export class ArticlePage {
     console.log('¿Header visible?', headerVisible);
   }
 
-
-
   async navigate() {
     await this.page.goto(
-      'https://www.lanacion.com.ar/politica/tras-la-caida-de-la-moratoria-la-oposicion-desafia-al-gobierno-impulsa-una-jubilacion-proporcional-a-nid25032025/',
+      process.env.URL_ARTICLE as string,
       { waitUntil: 'domcontentloaded', timeout: 60000 }
     );
   }

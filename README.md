@@ -78,6 +78,10 @@ npm run lint
 
 > Se utiliza una configuración moderna (flat config) compatible con TypeScript y las reglas recomendadas por ESLint.
 
+## Variables de entorno
+
+Este proyecto utiliza un archivo `.env` para definir variables de entorno reutilizables, como la URL base del sitio a testear.
+
 ## CI/CD con GitHub Actions
 
 Este proyecto incluye una pipeline automatizada que:

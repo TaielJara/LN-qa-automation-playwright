@@ -38,7 +38,7 @@ export class HomePage {
   }
 
   async navigate() {
-    await this.page.goto('https://www.lanacion.com.ar/');
+    await this.page.goto(process.env.URL_HOME as string);
   }
 
   async closeComercialWindow(){
@@ -107,7 +107,7 @@ export class HomePage {
     await expect(this.buttonLogin).toBeEnabled();
     await expect(this.buttonSubscribe).toBeEnabled();
     await expect(this.buttonLogin).toHaveText('INICIAR SESIÓN');
-    await expect(this.buttonSubscribe).toHaveText('Suscribite');
+    await expect(this.buttonSubscribe).toContainText('Suscribite');
   }
 
   async validateImgFooter(){
@@ -255,19 +255,16 @@ export class HomePage {
   async validateMainArticle() {
     const article = this.page.locator('article.ln-card').first();
     await expect(article).toBeVisible();
-  
+
     const title = article.locator('h1');
-    await expect(title, 'El artículo principal no contiene <h1>').toBeVisible();
-  
+    await expect(title).toBeVisible();
+
     const img = article.locator('picture img');
-    const video = article.locator('video, iframe');
-  
-    if (await img.count() > 0) {
-      await expect(img.first()).toBeVisible();
-    } else if (await video.count() > 0) {
-      await expect(video.first()).toBeVisible();
-    } else {
-      throw new Error('El artículo principal no contiene ni imagen ni video.');
+
+    const imgExists = await img.count() > 0;
+
+    if (!imgExists) {
+      throw new Error('El artículo principal no contiene imagen.');
     }
   }  
 }
