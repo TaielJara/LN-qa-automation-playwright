@@ -48,7 +48,7 @@ export class HomePage {
     } catch {
       console.log('La página no terminó de cargar, pero seguimos el test.');
     }
-  }  
+  }
   
 
   async validateHeader(shouldBeVisible = false) {
