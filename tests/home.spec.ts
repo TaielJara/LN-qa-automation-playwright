@@ -9,8 +9,7 @@ test.describe('Home de La Nación', () => {
   test.beforeEach(async ({ page }) => {
     home = new HomePage(page);
     await home.navigate();
-    await home.closeComercialWindow();
-    await home.closeModal();
+    await home.waitForPageToBeReady();
   });
 
   test('El header se muestra correctamente', async () => {

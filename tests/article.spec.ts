@@ -13,8 +13,7 @@ test.describe('Página de artículo de La Nación', () => {
     article = new ArticlePage(page);
     network = new NetworkService(page);
     await article.navigate();
-    await home.closeComercialWindow();
-    await home.closeModal();
+    await home.waitForPageToBeReady();
   });
 
   test('El header del artículo se muestra correctamente', async () => {
